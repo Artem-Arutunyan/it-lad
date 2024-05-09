@@ -1,8 +1,19 @@
 import classes from './Products.module.scss';
 
+interface ProductType {
+        id: number; 
+        name: string;
+        imageUrl: string;
+        price: number;
+        discount: number;
+        rating: number;
+        isFavorite: boolean;
+};
+
+
 function Products() {
 
-    const product = {
+    const product: ProductType = {
         id: 1, 
         name: 'Наручные часы мужские SKMEI 1251',
         imageUrl: 'https://main-cdn.sbermegamarket.ru/big2/hlr-system/214/156/886/511/117/11/600004929632b0.jpeg',
@@ -11,7 +22,6 @@ function Products() {
         rating: 4.7,
         isFavorite: false
     };
-
 
 
   return (
