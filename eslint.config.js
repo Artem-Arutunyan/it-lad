@@ -21,7 +21,7 @@ export default tseslint.config(
 	},
 	//указываем папки, которые игнорируются ESLint
 	{
-	ignores: ['node_modules', 'dist', 'eslint.config.js', 'tailwind.config.js', 'postcss.config.js']
+	ignores: ['node_modules', 'dist', 'eslint.config.js', 'postcss.config.js']
 	},
 	js.configs.recommended,
 	...tseslint.configs.recommended,
