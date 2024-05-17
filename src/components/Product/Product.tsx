@@ -1,14 +1,14 @@
-import classes from './Product.module.scss';
-import { IProducts } from '../types/product';
-import { FC } from 'react';
-import MyButton from '../MyButton/MyButton';
+import classes from "./Product.module.scss";
+import { IProducts } from "../types/product";
+import { FC } from "react";
+import MyButton from "../MyButton/MyButton";
 
 interface ProductProps {
   item: IProducts;
 }
 
 const Product: FC<ProductProps> = ({ item }) => {
-  const handleOnBy = () => {
+  const handleBuy = () => {
     alert(`Товар ${item.name} добавлен в корзину`);
   };
 
@@ -51,7 +51,7 @@ const Product: FC<ProductProps> = ({ item }) => {
               </ul>
             </div>
 
-            <MyButton onBuy={handleOnBy} color='red'>В КОРЗИНУ</MyButton>
+            <MyButton onClick={handleBuy} color='red'>В КОРЗИНУ</MyButton>
         </div>
         {/* Секция с информацией */}
 
