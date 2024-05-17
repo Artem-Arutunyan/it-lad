@@ -4,10 +4,10 @@ import classes from "./MyButton.module.scss";
 interface ButtonProps {
   children: ReactNode;
   color: "red" | "green" | "blue";
-  onBuy: () => void;
+  onClick: () => void;
 }
 
-const MyButton: FC<ButtonProps> = ({ children, onBuy, color = "red" }) => {
+const MyButton: FC<ButtonProps> = ({ children, onClick, color = "red" }) => {
   //prettier-ignore
   const { buy_btn, 
           buy_btnred,   //стиль для красной кнопки
@@ -18,7 +18,7 @@ const MyButton: FC<ButtonProps> = ({ children, onBuy, color = "red" }) => {
   return (
     <button
       className={`${buy_btn} ${color == "blue" ? buy_btnblue : color == "green" ? buy_btngreen : buy_btnred}`}
-      onClick={onBuy}
+      onClick={onClick}
     >
       {children}
     </button>

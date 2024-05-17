@@ -8,7 +8,7 @@ interface ProductProps {
 }
 
 const Product: FC<ProductProps> = ({ item }) => {
-  const handleOnBy = () => {
+  const handleBuy = () => {
     alert(`Товар ${item.name} добавлен в корзину`);
   };
 
@@ -51,7 +51,7 @@ const Product: FC<ProductProps> = ({ item }) => {
               </ul>
             </div>
 
-            <MyButton onBuy={handleOnBy} color='red'>В КОРЗИНУ</MyButton>
+            <MyButton onClick={handleBuy} color='red'>В КОРЗИНУ</MyButton>
         </div>
         {/* Секция с информацией */}
 
