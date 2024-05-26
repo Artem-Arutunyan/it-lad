@@ -6,4 +6,6 @@ export interface IProducts {
   discount: number;
   rating: number;
   isFavorite: boolean;
+  count: number;
 }
+

@@ -1,23 +1,23 @@
 import { FC, ReactNode } from "react";
-import classes from "./MyButton.module.scss";
+import classNames from 'classnames';
 
 interface ButtonProps {
   children: ReactNode;
-  color: "red" | "green" | "blue";
+  color?: "red" | "green" | "blue";
   onClick: () => void;
 }
 
 const MyButton: FC<ButtonProps> = ({ children, onClick, color = "red" }) => {
   //prettier-ignore
-  const { buy_btn, 
-          buy_btnred,   //стиль для красной кнопки
-          buy_btngreen, //стиль для зеленой кнопки
-          buy_btnblue   //стиль для синей кнопки
-                        } = classes;
-
   return (
     <button
-      className={`${buy_btn} ${color == "blue" ? buy_btnblue : color == "green" ? buy_btngreen : buy_btnred}`}
+      className={classNames({
+            "text-white uppercase px-5 py-2 rounded-lg":true, 
+            'bg-red-500': color === 'red',  
+            'bg-green-500': color === 'green',
+            'bg-blue-500': color === 'blue',
+                              }
+                )}
       onClick={onClick}
     >
       {children}
